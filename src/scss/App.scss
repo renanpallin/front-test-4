@@ -7,6 +7,9 @@ body {
 @import './variables.scss';
 @import './smartphones.scss';
 
+@import './paginator.scss';
+
+
 @media screen and (min-width: $tablets) and (max-width: $desktops){
     @import './tablets.scss';
 }

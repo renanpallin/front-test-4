@@ -10,6 +10,30 @@ body {
 body {
   padding: 0 25px; }
 
+.paginator {
+  margin-bottom: 600px; }
+  .paginator ul {
+    text-align: center; }
+    .paginator ul li {
+      border: solid 2px #cbcbcb;
+      width: 40px;
+      height: 40px;
+      list-style: none;
+      display: inline-block;
+      margin: 0 5px;
+      border-radius: 5px;
+      position: relative;
+      font-weight: bold;
+      color: #cbcbcb; }
+      .paginator ul li.active {
+        background-color: #cbcbcb;
+        color: white; }
+      .paginator ul li span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .card-wrapper {
     max-width: 50%; }
