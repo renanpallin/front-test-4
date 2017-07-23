@@ -39,6 +39,7 @@ export default class Home extends React.Component {
   onChooseCategoryFilter(e) {
     this.isSelectOptionsOpen.checked = false;
     this.selectLabel.innerText = e.target.parentNode.innerText;
+    this.setState({ page: 1 });
     this.setState({ categoryFilter: e.target.value });
   }
 

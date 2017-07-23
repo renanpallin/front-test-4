@@ -1,15 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0; }
-
 *,
 *::before,
 *::after {
   box-sizing: border-box; }
 
 body {
-  padding: 0 25px; }
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; }
+
+img {
+  width: 100%; }
+
+.border-and-shadow {
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3); }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  color: #8b8b8b; }
+
+h2 {
+  margin: 20px 0px; }
+
+h3 {
+  margin: 10px 0px; }
+
+p {
+  color: #8b8b8b; }
+
+body {
+  padding: 25px; }
 
 .paginator ul li {
   width: 20px;
@@ -27,7 +49,7 @@ body {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2); }
 
 .header-push {
-  padding-bottom: 75px; }
+  padding-bottom: 50px; }
 
 .filter-wrapper {
   margin: 20px auto;
@@ -163,23 +185,10 @@ body {
   background-color: #eee;
   overflow: hidden;
   text-align: center;
-  border-radius: 5px;
   display: inline-block;
-  width: 100%;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3); }
-  .card img {
-    width: 100%; }
+  width: 100%; }
   .card .card-description {
     padding: 0 20px 20px 20px; }
-    .card .card-description h3 {
-      text-transform: uppercase;
-      color: #8b8b8b;
-      margin: 10px 0px; }
-    .card .card-description p {
-      color: #909090;
-      line-height: 1.2em; }
     .card .card-description a {
       background-color: #cbcbcb;
       border-radius: 4px;
@@ -205,7 +214,10 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
-    padding: 0 60px; }
+    padding-left: calc(10% - 50px);
+    padding-right: calc(10% - 50px);
+    max-width: 1400px;
+    margin: 0 auto; }
   .card-wrapper {
     max-width: 33.333333333333%; }
     .card-wrapper:nth-child(3n-2) {

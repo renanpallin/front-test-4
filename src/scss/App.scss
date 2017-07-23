@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-}
-
 @import './reset.scss';
 @import './variables.scss';
+@import './general.scss';
 @import './smartphones.scss';
 
 @import './header.scss';
 @import './select.scss';
 @import './paginator.scss';
 @import './card.scss';
+
+
 
 
 @media screen and (min-width: $tablets) and (max-width: $desktops){

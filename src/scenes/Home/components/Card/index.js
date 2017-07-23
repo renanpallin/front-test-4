@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 export default class Card extends React.Component {
   render() {
@@ -7,12 +8,12 @@ export default class Card extends React.Component {
 
     return (
       <div className="card-wrapper">
-        <div className="card">
+        <div className="card border-and-shadow">
           <img src={ singleNew.image_thumb } alt={ singleNew.txt_resume } />
           <div className="card-description">
             <h3>{ singleNew.category }</h3>
             <p>{ singleNew.txt_resume }</p>
-            <a href={`/news/${ singleNew.id }`}>{ singleNew.txt_button }</a>
+            <Link to={`/news/${ singleNew.id }`}>{ singleNew.txt_button }</Link>
           </div>
         </div>
       </div>

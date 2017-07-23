@@ -25,6 +25,7 @@ class App extends React.Component {
   }
 
   render() {
+    window.news = this.state.news;
     return (
       <div className="App">
         <Router>
@@ -47,7 +48,13 @@ class App extends React.Component {
               render={props => (
                 <Scenes.News
                   {...props}
-                  news={this.state.news} />
+                  news={this.state.news}
+                  singleNew={
+                    this.state.news.find(
+                      n => n.id === parseInt(props.match.params.id)
+                    ) || {}
+                  }
+                   />
               )} />
           </div>
         </Router>
