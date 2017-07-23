@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 body {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 @import './reset.scss';
@@ -10,13 +11,7 @@ body {
 @import './paginator.scss';
 
 
-@media screen and (min-width: $tablets) and (max-width: $desktops){
-    @import './tablets.scss';
-}
 
-@media screen and (min-width: $desktops) {
-    @import './desktops.scss';
-}
 
 .card-wrapper {
   display: inline-block;
@@ -68,4 +63,13 @@ body {
       text-transform: uppercase;
     }
   }
+}
+
+
+@media screen and (min-width: $tablets) and (max-width: $desktops){
+    @import './tablets.scss';
+}
+
+@media screen and (min-width: $desktops) {
+    @import './desktops.scss';
 }

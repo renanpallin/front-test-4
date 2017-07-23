@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; }
 
 *,
 *::before,
@@ -10,62 +11,46 @@ body {
 body {
   padding: 0 25px; }
 
-.paginator {
-  margin-bottom: 600px; }
-  .paginator ul {
-    text-align: center; }
-    .paginator ul li {
-      border: solid 2px #cbcbcb;
-      width: 40px;
-      height: 40px;
-      list-style: none;
-      display: inline-block;
-      margin: 0 5px;
-      border-radius: 5px;
-      position: relative;
-      font-weight: bold;
-      color: #cbcbcb; }
-      .paginator ul li.active {
-        background-color: #cbcbcb;
-        color: white; }
-      .paginator ul li span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
-      .paginator ul li:first-child:before {
-        content: '<';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
-      .paginator ul li:last-child:before {
-        content: '>';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
+.paginator ul li {
+  width: 20px;
+  height: 20px; }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .card-wrapper {
-    max-width: 50%; }
-    .card-wrapper:nth-child(even) {
-      padding-left: 25px; }
-    .card-wrapper:nth-child(odd) {
-      padding-right: 25px; } }
-
-@media screen and (min-width: 1024px) {
-  body {
-    padding: 0 60px; }
-  .card-wrapper {
-    max-width: 33.333333333333%; }
-    .card-wrapper:nth-child(3n-2) {
-      padding-right: 32px; }
-    .card-wrapper:nth-child(3n-1) {
-      padding-right: 16px;
-      padding-left: 16px; }
-    .card-wrapper:nth-child(3n) {
-      padding-left: 32px; } }
+.paginator ul {
+  text-align: center;
+  padding-left: 0px;
+  white-space: nowrap; }
+  .paginator ul li {
+    border: solid 1px #cbcbcb;
+    width: 100%;
+    max-width: 35px;
+    height: 35px;
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 5px;
+    position: relative;
+    font-weight: bold;
+    color: #cbcbcb; }
+    .paginator ul li.active {
+      background-color: #cbcbcb;
+      color: white; }
+    .paginator ul li span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .paginator ul li:first-child:before {
+      content: '<';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .paginator ul li:last-child:before {
+      content: '>';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 .card-wrapper {
   display: inline-block;
@@ -101,3 +86,30 @@ body {
       color: #eee;
       text-decoration: none;
       text-transform: uppercase; }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .card-wrapper {
+    max-width: 50%; }
+    .card-wrapper:nth-child(even) {
+      padding-left: 25px; }
+    .card-wrapper:nth-child(odd) {
+      padding-right: 25px; }
+  .paginator ul li {
+    max-width: 40px;
+    height: 40px; } }
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0 60px; }
+  .card-wrapper {
+    max-width: 33.333333333333%; }
+    .card-wrapper:nth-child(3n-2) {
+      padding-right: 32px; }
+    .card-wrapper:nth-child(3n-1) {
+      padding-right: 16px;
+      padding-left: 16px; }
+    .card-wrapper:nth-child(3n) {
+      padding-left: 32px; }
+  .paginator ul li {
+    max-width: 40px;
+    height: 40px; } }

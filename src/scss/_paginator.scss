@@ -1,12 +1,16 @@
 .paginator {
-  margin-bottom: 600px;
+  // margin-bottom: 600px;
   ul {
     text-align: center;
+    padding-left: 0px;
+    white-space: nowrap;
     li {
-      border: solid 2px $bg-button;
+      border: solid 1px $bg-button;
 
-      width: 40px;
-      height: 40px;
+      width: 100%;
+      max-width: 35px;
+      height: 35px;
+
       list-style: none;
       display: inline-block;
       margin: 0 5px;
