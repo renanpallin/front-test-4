@@ -23,7 +23,7 @@
 
       &.active {
         background-color: $bg-button;
-        color: white;
+        color: $bg-default;
       }
 
       span {

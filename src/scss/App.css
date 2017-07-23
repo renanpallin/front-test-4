@@ -33,7 +33,7 @@ body {
     color: #cbcbcb; }
     .paginator ul li.active {
       background-color: #cbcbcb;
-      color: white; }
+      color: #fff; }
     .paginator ul li span {
       position: absolute;
       top: 50%;
@@ -86,6 +86,20 @@ body {
       color: #eee;
       text-decoration: none;
       text-transform: uppercase; }
+
+.header {
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2); }
+
+.header-push {
+  padding-bottom: 75px; }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .card-wrapper {

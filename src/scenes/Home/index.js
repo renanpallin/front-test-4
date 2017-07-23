@@ -44,7 +44,10 @@ export default class Home extends React.Component {
 
     return (
       <div>
-        <h1>Home</h1>
+        <div className="header">
+          <h1>select</h1>
+        </div>
+        <div className="header-push"></div>
         <div className="cards">
           { cards }
         </div>
