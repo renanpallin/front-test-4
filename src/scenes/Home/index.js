@@ -11,25 +11,54 @@ export default class Home extends React.Component {
     }
   }
 
+  nextPage(e) {
+    let { page } = this.state;
+    ++page;
+
+    const { news } = this.props;
+    const { itensByPage } = this.state;
+    if (page > Math.ceil(news.length / itensByPage))
+      return;
+
+    this.setState({ page });
+  }
+
+  previousPage(e) {
+    let { page } = this.state;
+    --page;
+    if (page < 1)
+      return;
+    this.setState({ page });
+  }
+
+  goToPage(page){
+    this.setState({ page });
+  };
+
   render() {
-    const cards = this.props.news.map(n => <Card key={ n.id } new={ n } />);
     const { itensByPage, page } = this.state;
     const numberOfPages = Math.ceil(this.props.news.length / itensByPage);
+    const newsOfCurrentPage = this.props.news.slice(itensByPage * (page -1), itensByPage * page);
+    const cards = newsOfCurrentPage.map((n, i) => <Card key={ n.id } new={ n } />);
 
     return (
       <div>
         <h1>Home</h1>
         <div className="cards">
-          { cards.splice(itensByPage * (page - 1), itensByPage * page) }
+          { cards }
         </div>
         <div className="paginator">
           <ul>
-            <li></li>
+            <li onClick={e => this.previousPage(e)}></li>
             {
               Array(numberOfPages)
                 .fill()
                 .map((undef, index) => (
-                    <li key={index + 1}>
+                    <li
+                      key={index + 1}
+                      className={index === (this.state.page - 1) ? "active" : ""}
+
+                      onClick={e => this.goToPage(index +1 )}>
                       <span>
                         {index + 1}
                       </span>
@@ -37,7 +66,7 @@ export default class Home extends React.Component {
                   )
                 )
             }
-            <li></li>
+            <li onClick={e => this.nextPage(e)}></li>
           </ul>
         </div>
       </div>
