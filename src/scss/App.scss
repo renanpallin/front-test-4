@@ -3,14 +3,17 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@import './reset.scss';
+@import './variables.scss';
+@import './smartphones.scss';
+
+@media screen and (min-width: $tablets) {
+    @import './tablets.scss';
 }
 
-@import './variables.scss';
-@import './_smartphones.scss';
+@media screen and (min-width: $desktops) {
+    @import './desktops.scss';
+}
 
 .card {
   background-color: $bg-gray;
@@ -18,6 +21,7 @@ body {
   text-align: center;
   border-radius: 5px;
 
+  display: inline-block;
   margin: 25px 0;
 
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
