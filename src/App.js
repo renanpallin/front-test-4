@@ -2,9 +2,7 @@ import React from 'react';
 import './scss/App.css';
 
 import {
-  Switch,
   Route,
-  Link,
   Redirect,
   BrowserRouter as Router
 } from 'react-router-dom'
@@ -35,6 +33,11 @@ class App extends React.Component {
             <Route
               path='/'
               exact
+              render={props => (
+                <Redirect to='/home'/>
+              )} />
+            <Route
+              path='/home'
               render={props => (
                 <Scenes.Home
                   {...props}
