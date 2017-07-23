@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Card from './components/Card';
+import Paginator from './components/Paginator';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -47,28 +48,13 @@ export default class Home extends React.Component {
         <div className="cards">
           { cards }
         </div>
-        <div className="paginator">
-          <ul>
-            <li onClick={e => this.previousPage(e)}></li>
-            {
-              Array(numberOfPages)
-                .fill()
-                .map((undef, index) => (
-                    <li
-                      key={index + 1}
-                      className={index === (this.state.page - 1) ? "active" : ""}
-
-                      onClick={e => this.goToPage(index +1 )}>
-                      <span>
-                        {index + 1}
-                      </span>
-                    </li>
-                  )
-                )
-            }
-            <li onClick={e => this.nextPage(e)}></li>
-          </ul>
-        </div>
+        <Paginator
+          previousPage={e => this.previousPage(e)}
+          goToPage={e => this.goToPage(e)}
+          nextPage={e => this.nextPage(e)}
+          numberOfPages={numberOfPages}
+          page={page}
+        />
       </div>
     )
   }
