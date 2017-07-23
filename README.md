@@ -1,4 +1,38 @@
-# **Teste Desenvolvedor Front-End PL.**  
+# ReadMe!
+
+## Rodando o projeto
+```
+  npm install
+  npm start
+```
+
+## Tenologias utilizadas
+ - React
+ - SASS
+
+## Estrutura do projeto
+O projeto possui uma arquitetura simples. Dentro da pasta ```src``` temos o ```App.js```, entry point da aplicação e duas subpastas, a ```scenes``` e a ```scss```, detalhadas abaixo.
+- ```scenes``` => Armazenam as páginas da SPA
+- ```scss``` => Armazenam os aquivos de estilo da SPA
+
+Não foi utilizado nenhum plugin ou framework css ou js.
+### Estrutura do React
+O projeto segue um padrão onde todos os módulos são diretórios com um index.js como entry point e pode conter um diretório chamado ```components``` para armazenar sub-módulos.
+
+### Estrutura do SCSS
+Dentro de ```src/scss``` encontramos diversos arquivos .scss. O entry point é o App.scss, onde todos os outros são importados. Foi utilizado o conceito Mobile First e a metodologia DRY (**D**on't **R**epeat **Y**ourself), buscando o reaproveitamento máximo de código e a máxima componetização.
+Existe um arquivo para cada componente significativo no projeto (como o ```paginator```, o ```select```), um arquivo ```_general.scss``` onde encontra-se os estilos para os coponents mais comuns, um ```_variables.scss``` para todas as variáveis de cores e breakpoints e um arquivo específico para cada breakpoint utilizado.
+
+
+##### Créditos
+Foi utilizado um SVG para as setinhas das paginações e do custom select e gostaría de creditar e agradescer o autor.
+Autor: https://www.flaticon.com/free-icon/next_126490
+
+
+---
+
+
+# **Teste Desenvolvedor Front-End PL.**
 
 > [![Logo Foster](http://www.foster.com.br/images/logo-foster-home.png)](http://www.foster.com.br/)
 
