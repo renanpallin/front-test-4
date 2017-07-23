@@ -12,6 +12,20 @@ import {
 import * as Scenes from './scenes';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      news: []
+    };
+  }
+
+  componentDidMount() {
+    fetch('https://api.myjson.com/bins/a56hd')
+      .then(response => response.json())
+      .then(news => this.setState({ news }));
+  }
+
   render() {
     return (
       <div className="App">
@@ -21,10 +35,18 @@ class App extends React.Component {
             <Route
               path='/'
               exact
-              component={Scenes.Home} />
+              render={props => (
+                <Scenes.Home
+                  {...props}
+                  news={this.state.news} />
+              )} />
             <Route
               path='/news/:id'
-              component={Scenes.News} />
+              render={props => (
+                <Scenes.News
+                  {...props}
+                  news={this.state.news} />
+              )} />
           </div>
         </Router>
 
