@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import './variables.scss';
+@import './_smartphones.scss';
+
+.card {
+  background-color: $bg-gray;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
+
+  img {
+    width: 100%;
+  }
+
+  .card-description {
+    padding: 0 20px 20px 20px;
+
+    h3 {
+      text-transform: uppercase;
+      color: $txt-color-title;
+      margin: 10px 0px;
+    }
+
+    p {
+      color: $txt-color-text;
+      line-height: 1.2em;
+    }
+
+    a {
+      background-color: $bg-button;
+      border-radius: 4px;
+      padding: 10px 20px;
+
+      display: inline-block;
+
+      font-weight: bold;
+      color: $bg-gray;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
