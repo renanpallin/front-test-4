@@ -15,7 +15,7 @@ O projeto possui uma arquitetura simples. Dentro da pasta ```src``` temos o ```A
 - ```scenes``` => Armazenam as páginas da SPA
 - ```scss``` => Armazenam os aquivos de estilo da SPA
 
-Não foi utilizado nenhum plugin ou framework css ou js.
+Não foi utilizado nenhum plugin ou framework css ou js para a construção da SPA.
 ### Estrutura do React
 O projeto segue um padrão onde todos os módulos são diretórios com um index.js como entry point e pode conter um diretório chamado ```components``` para armazenar sub-módulos.
 
@@ -28,6 +28,7 @@ Existe um arquivo para cada componente significativo no projeto (como o ```pagin
 Foi utilizado um SVG para as setinhas das paginações e do custom select e gostaría de creditar e agradescer o autor.
 Autor: https://www.flaticon.com/free-icon/next_126490
 
+Foi utilizado o ```modernizr``` para aumentar a compatibilidade com browsers antigos.
 
 ---
 
