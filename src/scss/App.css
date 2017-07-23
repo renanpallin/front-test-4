@@ -15,6 +15,95 @@ body {
   width: 20px;
   height: 20px; }
 
+.filter-wrapper {
+  margin: 20px auto;
+  width: calc(100% - 50px); }
+
+.filter-wrapper:after {
+  content: "";
+  display: block;
+  clear: left; }
+
+.select {
+  position: relative;
+  width: 200px;
+  border-radius: 5px;
+  width: 100%; }
+
+.select input {
+  position: absolute;
+  left: -9999px; }
+
+.toggle + label {
+  z-index: 2;
+  width: 100%;
+  height: 40px;
+  display: block;
+  background: #fff;
+  line-height: 40px;
+  border-radius: 3px;
+  color: #8b8b8b;
+  position: relative;
+  border: solid 1px #cbcbcb;
+  text-align: left;
+  padding-left: 10px; }
+
+.toggle + label::before {
+  content: "";
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  height: 40px;
+  width: 40px;
+  border: solid 1px #cbcbcb; }
+
+.toggle + label::after {
+  content: ">";
+  position: absolute;
+  right: 12px;
+  top: 0px;
+  -webkit-transform: rotate(90deg); }
+
+.select ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  max-height: 0px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  -moz-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  -ms-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  -o-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  background: #fff;
+  width: calc(100% - 39px);
+  border-radius: 0 0 3px 3px; }
+
+.toggle:checked ~ ul {
+  max-height: 1000px; }
+
+.select-option label {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.44);
+  border: solid 1px #cbcbcb;
+  margin-top: -1px;
+  text-align: left;
+  padding-left: 10px;
+  color: #8b8b8b;
+  text-transform: capitalize; }
+
+.select-option label:hover {
+  background: #eee; }
+
+.select ul,
+.select ul li:nth-last-child(1) label {
+  border-radius: 0 0 5px 5px; }
+
 .paginator ul {
   text-align: center;
   padding-left: 0px;
@@ -127,92 +216,3 @@ body {
   .paginator ul li {
     max-width: 40px;
     height: 40px; } }
-
-.filter-wrapper {
-  margin: 20px auto;
-  width: calc(100% - 50px); }
-
-.filter-wrapper:after {
-  content: "";
-  display: block;
-  clear: left; }
-
-.select {
-  position: relative;
-  width: 200px;
-  border-radius: 5px;
-  width: 100%; }
-
-.select input {
-  position: absolute;
-  left: -9999px; }
-
-.toggle + label {
-  z-index: 2;
-  width: 100%;
-  height: 40px;
-  display: block;
-  background: #fff;
-  line-height: 40px;
-  border-radius: 3px;
-  color: #8b8b8b;
-  position: relative;
-  border: solid 1px #cbcbcb;
-  text-align: left;
-  padding-left: 10px; }
-
-.toggle + label::before {
-  content: "";
-  border-radius: 0 3px 3px 0;
-  position: absolute;
-  right: -1px;
-  top: -1px;
-  height: 40px;
-  width: 40px;
-  border: solid 1px #cbcbcb; }
-
-.toggle + label::after {
-  content: ">";
-  position: absolute;
-  right: 12px;
-  top: 0px;
-  -webkit-transform: rotate(90deg); }
-
-.select ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  max-height: 0px;
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
-  -moz-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
-  -ms-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
-  -o-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
-  transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
-  background: #fff;
-  width: calc(100% - 39px);
-  border-radius: 0 0 3px 3px; }
-
-.toggle:checked ~ ul {
-  max-height: 1000px; }
-
-.select-option label {
-  display: block;
-  padding: 10px;
-  cursor: pointer;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.01);
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.44);
-  border: solid 1px #cbcbcb;
-  margin-top: -1px;
-  text-align: left;
-  padding-left: 10px;
-  color: #8b8b8b;
-  text-transform: capitalize; }
-
-.select-option label:hover {
-  background: #eee; }
-
-.select ul,
-.select ul li:nth-last-child(1) label {
-  border-radius: 0 0 5px 5px; }

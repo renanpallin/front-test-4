@@ -8,81 +8,10 @@ body {
 @import './variables.scss';
 @import './smartphones.scss';
 
+@import './select.scss';
 @import './paginator.scss';
+@import './card.scss';
 
-
-
-
-.card-wrapper {
-  display: inline-block;
-  padding: 25px 0;
-}
-
-.card {
-  background-color: $bg-gray;
-  overflow: hidden;
-  text-align: center;
-  border-radius: 5px;
-
-  display: inline-block;
-
-  width: 100%;
-
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.3);
-
-  img {
-    width: 100%;
-  }
-
-  .card-description {
-    padding: 0 20px 20px 20px;
-
-    h3 {
-      text-transform: uppercase;
-      color: $txt-color-title;
-      margin: 10px 0px;
-    }
-
-    p {
-      color: $txt-color-text;
-      line-height: 1.2em;
-    }
-
-    a {
-      background-color: $bg-button;
-      border-radius: 4px;
-      padding: 10px 20px;
-
-      display: inline-block;
-
-      font-weight: bold;
-      color: $bg-gray;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-  }
-}
-
-.header {
-  height: 75px;
-  width: 100%;
-
-  position: fixed;
-  top: 0px;
-  left: 0px;
-
-  background-color: $bg-default;
-
-  -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
-}
-
-.header-push {
-  padding-bottom: 75px;
-}
 
 @media screen and (min-width: $tablets) and (max-width: $desktops){
     @import './tablets.scss';
@@ -91,5 +20,3 @@ body {
 @media screen and (min-width: $desktops) {
     @import './desktops.scss';
 }
-
-@import './select.scss';
