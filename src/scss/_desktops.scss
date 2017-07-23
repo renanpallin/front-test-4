@@ -1,3 +1,20 @@
-.card {
-  max-width: 33.3333333333%;
+body {
+  padding: 0 60px;
+}
+
+.card-wrapper {
+  max-width: 33.333333333333%;
+
+  &:nth-child(3n-2) {
+      padding-right: 32px;
+  }
+
+  &:nth-child(3n-1) {
+      padding-right: 16px;
+      padding-left: 16px;
+  }
+
+  &:nth-child(3n) {
+      padding-left: 32px;
+  }
 }

@@ -1,13 +1,11 @@
-.card {
+.card-wrapper {
   max-width: 50%;
 
+  &:nth-child(even) {
+    padding-left: 25px;
+  }
 
-  // &:nth-child(even) {
-  //   margin-right: 10px;
-  // }
-
-  // &:nth-child(odd) {
-  //   margin-left: 10px;
-  // }
-
+  &:nth-child(odd) {
+    padding-right: 25px;
+  }
 }
