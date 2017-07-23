@@ -45,8 +45,10 @@ export default class Home extends React.Component {
   render() {
     const { itensByPage, page } = this.state;
     const { news } = this.props;
-    const numberOfPages = Math.ceil(news.length / itensByPage);
-    const newsOfCurrentPage = news.slice(itensByPage * (page -1), itensByPage * page);
+    const filteredNews = this.state.categoryFilter ? news.filter(n => n.category === this.state.categoryFilter) : news;
+
+    const numberOfPages = Math.ceil(filteredNews.length / itensByPage);
+    const newsOfCurrentPage = filteredNews.slice(itensByPage * (page -1), itensByPage * page);
     const cards = newsOfCurrentPage.map((n, i) => <Card key={ n.id } new={ n } />);
 
     let categories = new Set(news.map(n => n.category));
