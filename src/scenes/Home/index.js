@@ -24,6 +24,7 @@ export default class Home extends React.Component {
         </div>
         <div className="paginator">
           <ul>
+            <li></li>
             {
               Array(numberOfPages)
                 .fill()
@@ -36,6 +37,7 @@ export default class Home extends React.Component {
                   )
                 )
             }
+            <li></li>
           </ul>
         </div>
       </div>
