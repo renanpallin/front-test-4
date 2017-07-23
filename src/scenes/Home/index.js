@@ -36,16 +36,54 @@ export default class Home extends React.Component {
     this.setState({ page });
   };
 
+  onChooseCategoryFilter(e) {
+    this.isSelectOptionsOpen.checked = false;
+    this.selectLabel.innerText = e.target.parentNode.innerText;
+    this.setState({ categoryFilter: e.target.value });
+  }
+
   render() {
     const { itensByPage, page } = this.state;
-    const numberOfPages = Math.ceil(this.props.news.length / itensByPage);
-    const newsOfCurrentPage = this.props.news.slice(itensByPage * (page -1), itensByPage * page);
+    const { news } = this.props;
+    const numberOfPages = Math.ceil(news.length / itensByPage);
+    const newsOfCurrentPage = news.slice(itensByPage * (page -1), itensByPage * page);
     const cards = newsOfCurrentPage.map((n, i) => <Card key={ n.id } new={ n } />);
+
+    let categories = new Set(news.map(n => n.category));
 
     return (
       <div>
         <div className="header">
-          <h1>select</h1>
+          <div className="filter-wrapper">
+            <div className="select">
+              <input
+                ref={el => this.isSelectOptionsOpen = el}
+                type="checkbox"
+                id="toggle"
+                className="toggle" />
+                <label
+                  ref={el => this.selectLabel = el}
+                  htmlFor="toggle">
+                  Selecione uma categoria
+                </label>
+              <ul>
+                {
+                  Array.from(categories).map(category => (
+                    <li key={category} className="select-option">
+                      <label>
+                        <input
+                          type="radio"
+                          name="choice"
+                          value={category}
+                          onClick={e => this.onChooseCategoryFilter(e)} />
+                        {category}
+                      </label>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
         </div>
         <div className="header-push"></div>
         <div className="cards">

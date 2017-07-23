@@ -1,0 +1,110 @@
+
+.filter-wrapper {
+  margin: 20px auto;
+  width: calc(100% - 50px);
+}
+
+.filter-wrapper:after {
+  content: "";
+  display: block;
+  clear: left;
+}
+
+.select {
+  position: relative;
+  width: 200px;
+
+  border-radius: 5px;
+  width: 100%;
+}
+
+.select input{
+  position:absolute;
+  left:-9999px;
+}
+
+.toggle + label {
+  z-index: 2;
+  width: 100%;
+  height: 40px;
+  display: block;
+  background: $bg-default;
+  line-height: 40px;
+  border-radius: 3px;
+  color: $txt-color-title;
+  position: relative;
+
+  border: solid 1px $bg-button;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.toggle + label::before {
+  content: "";
+
+  border-radius: 0 3px 3px 0;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+
+  height: 40px;
+  width: 40px;
+  border: solid 1px $bg-button;
+}
+
+.toggle + label::after {
+  content: ">";
+
+  position: absolute;
+  right: 12px;
+  top: 0px;
+  -webkit-transform: rotate(90deg);
+}
+
+.select ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  max-height: 0px;
+  overflow: hidden;
+  position: relative;
+
+  -webkit-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  -moz-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  -ms-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  -o-transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+  transition: all 500ms cubic-bezier(0.93, 0, 0, 1.08);
+
+  background: $bg-default;
+  width: calc(100% - 39px); // 40px - 1px de margin
+  border-radius: 0 0 3px 3px;
+}
+
+.toggle:checked ~ ul {
+  max-height: 1000px;
+}
+
+.select-option label {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.01);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.44);
+
+  border: solid 1px $bg-button;
+  margin-top: -1px;
+
+  text-align: left;
+  padding-left: 10px;
+  color: $txt-color-title;
+  text-transform: capitalize;
+}
+
+.select-option label:hover {
+  background: $bg-gray;
+}
+
+.select ul,
+.select ul li:nth-last-child(1) label{
+  border-radius: 0 0 5px 5px;
+}
