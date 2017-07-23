@@ -5,7 +5,7 @@
     padding-left: 0px;
     white-space: nowrap;
     li {
-      border: solid 1px $bg-button;
+      border: solid 1px $gray;
 
       width: 100%;
       max-width: 35px;
@@ -19,10 +19,15 @@
       position: relative;
 
       font-weight: bold;
-      color: $bg-button;
+      color: $gray;
+
+      &.hoverable:hover {
+        background-color: $gray-dark;
+        color: $bg-default;
+      }
 
       &.active {
-        background-color: $bg-button;
+        background-color: $gray;
         color: $bg-default;
       }
 
@@ -34,19 +39,27 @@
       }
 
       &:first-child:before {
-        content:'<';
+        content: url(./svg/arrow.svg);
         position: absolute;
+
+        display: inline-block;
+        width: 20px;
+        height: 20px;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-55%, -55%) rotate(180deg);
       }
 
       &:last-child:before {
-        content:'>';
+        content: url(./svg/arrow.svg);
         position: absolute;
+
+        display: inline-block;
+        width: 20px;
+        height: 20px;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-45%, -45%);
       }
     }
   }

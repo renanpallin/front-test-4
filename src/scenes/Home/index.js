@@ -13,12 +13,18 @@ export default class Home extends React.Component {
   }
 
   nextPage(e) {
-    let { page } = this.state;
+    let {
+      page,
+      categoryFilter,
+      itensByPage
+    } = this.state;
+    const { news } = this.props;
+
     ++page;
 
-    const { news } = this.props;
-    const { itensByPage } = this.state;
-    if (page > Math.ceil(news.length / itensByPage))
+    const filteredNews = categoryFilter ? news.filter(n => n.category === categoryFilter) : news;
+    const numberOfPages = Math.ceil(filteredNews.length / itensByPage);
+    if (page > numberOfPages)
       return;
 
     this.setState({ page });

@@ -17,7 +17,7 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  color: $txt-color-title;
+  color: $gray-dark;
 }
 
 h2 {
@@ -29,6 +29,29 @@ h3 {
 }
 
 p {
-  color: $txt-color-title;
+  color: $gray-dark;
   // line-height: 1.2em;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+// .hoverable:hover {
+//   background-color: $gray-dark;
+// }
+
+.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: unset !important;
+  }
 }

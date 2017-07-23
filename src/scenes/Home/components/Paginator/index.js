@@ -3,14 +3,16 @@ import React from 'react';
 export default props => (
   <div className="paginator">
     <ul>
-      <li onClick={e => props.previousPage(e)}></li>
+      <li
+        className={`btn hoverable ${props.page === 1 ? "disabled" : ""}`}
+        onClick={e => props.previousPage(e)} />
       {
         Array(props.numberOfPages)
           .fill()
           .map((undef, index) => (
               <li
                 key={index + 1}
-                className={index === (props.page - 1) ? "active" : ""}
+                className={`btn hoverable ${index === (props.page - 1) ? "active" : ""}`}
 
                 onClick={e => props.goToPage(index +1 )}>
                 <span>
@@ -20,7 +22,9 @@ export default props => (
             )
           )
       }
-      <li onClick={e => props.nextPage(e)}></li>
+      <li
+        className={`btn hoverable ${props.page === props.numberOfPages ? "disabled" : ""}`}
+        onClick={e => props.nextPage(e)} />
     </ul>
   </div>
 )

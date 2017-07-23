@@ -51,7 +51,7 @@ class App extends React.Component {
                   news={this.state.news}
                   singleNew={
                     this.state.news.find(
-                      n => n.id === parseInt(props.match.params.id)
+                      n => n.id === parseInt(props.match.params.id, 10)
                     ) || {}
                   }
                    />

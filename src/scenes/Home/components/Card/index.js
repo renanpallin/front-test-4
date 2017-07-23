@@ -13,7 +13,7 @@ export default class Card extends React.Component {
           <div className="card-description">
             <h3>{ singleNew.category }</h3>
             <p>{ singleNew.txt_resume }</p>
-            <Link to={`/news/${ singleNew.id }`}>{ singleNew.txt_button }</Link>
+            <Link className="btn hoverable" to={`/news/${ singleNew.id }`}>{ singleNew.txt_button }</Link>
           </div>
         </div>
       </div>

@@ -30,6 +30,20 @@ h3 {
 p {
   color: #8b8b8b; }
 
+.btn {
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.disabled {
+  opacity: .5;
+  cursor: not-allowed; }
+  .disabled:hover {
+    background-color: unset !important; }
+
 body {
   padding: 25px; }
 
@@ -80,6 +94,7 @@ body {
   border-radius: 3px;
   color: #8b8b8b;
   position: relative;
+  cursor: pointer;
   border: solid 1px #cbcbcb;
   text-align: left;
   padding-left: 10px; }
@@ -95,7 +110,10 @@ body {
   border: solid 1px #cbcbcb; }
 
 .toggle + label::after {
-  content: ">";
+  content: url(./svg/arrow.svg);
+  position: absolute;
+  display: inline-block;
+  transform: translate(-55%, -55%) rotate(180deg);
   position: absolute;
   right: 12px;
   top: 0px;
@@ -156,6 +174,9 @@ body {
     position: relative;
     font-weight: bold;
     color: #cbcbcb; }
+    .paginator ul li.hoverable:hover {
+      background-color: #8b8b8b;
+      color: #fff; }
     .paginator ul li.active {
       background-color: #cbcbcb;
       color: #fff; }
@@ -165,17 +186,23 @@ body {
       left: 50%;
       transform: translate(-50%, -50%); }
     .paginator ul li:first-child:before {
-      content: '<';
+      content: url(./svg/arrow.svg);
       position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-55%, -55%) rotate(180deg); }
     .paginator ul li:last-child:before {
-      content: '>';
+      content: url(./svg/arrow.svg);
       position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-45%, -45%); }
 
 .card-wrapper {
   display: inline-block;
@@ -187,17 +214,14 @@ body {
   text-align: center;
   display: inline-block;
   width: 100%; }
+  .card .btn {
+    padding: 10px 20px;
+    background-color: #cbcbcb;
+    color: #eee; }
+  .card .hoverable:hover {
+    background-color: #8b8b8b; }
   .card .card-description {
     padding: 0 20px 20px 20px; }
-    .card .card-description a {
-      background-color: #cbcbcb;
-      border-radius: 4px;
-      padding: 10px 20px;
-      display: inline-block;
-      font-weight: bold;
-      color: #eee;
-      text-decoration: none;
-      text-transform: uppercase; }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .card-wrapper {
