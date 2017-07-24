@@ -212,6 +212,10 @@ body {
   text-align: center;
   display: inline-block;
   width: 100%; }
+  .card .img-wrapper {
+    height: 200px;
+    background-color: #cbcbcb;
+    overflow: hidden; }
   .card .btn {
     padding: 10px 20px;
     background-color: #cbcbcb;
