@@ -1,5 +1,9 @@
 # ReadMe!
 
+## Demo
+Uma versão com rotas motificadas pode ser vista [aqui](https://renanpallin.github.io/front-test-4/).
+Nessa versão utilizamos HashRouters em vez de BrowserRouters por limitação do github pages.
+
 ## Rodando o projeto
 ```
   npm install
